@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: Center(
-              child: Image.asset('assets/images/logo.jpg'),
+              child: Image.asset('assets/images/logo.png'),
             )),
             //
             Padding(
@@ -29,6 +29,10 @@ class SplashScreen extends StatelessWidget {
                     backgroundColor: const Color(0xFF8C52FF),
                     foregroundColor: Colors.white,
                     textStyle: const TextStyle(fontSize: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                          30), // Adjust this value to control the roundness
+                    ),
                   ),
                   child: const Text("Get Started"),
                 ),

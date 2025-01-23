@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
                 Center(
                   child: Image.asset(
-                    'assets/images/logo.jpg',
+                    'assets/images/logo.png',
                     height: 150, // Adjust size as needed
                     width: 150,
                   ),
@@ -120,12 +120,14 @@ class _LoginPageState extends State<LoginPage> {
                       child: TextButton(
                         onPressed: () {
                           // Here am using routes
-                          Navigator.pushNamed(context, '/loginPage');
+                          Navigator.pushNamed(context, '/landingPage');
                         },
                         style: TextButton.styleFrom(
                           backgroundColor: const Color(0xFF8C52FF),
                           foregroundColor: Colors.white,
                           textStyle: const TextStyle(fontSize: 16),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
                         ),
                         child: const Text("Login"),
                       ),
